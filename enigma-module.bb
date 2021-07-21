@@ -93,7 +93,7 @@ print_md5hash() {
 
 do_install() {
 	install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/enigma
-	modinfo -d ${S}/enigma.ko > ${S}/enigma.txt
+	${sbindir}/modinfo -d ${S}/enigma.ko > ${S}/enigma.txt
 	sed -i '1d' ${S}/enigma.txt
 	sort  ${S}/enigma.txt > enigma-${MACHINE}-${VISIONREVISION}.txt
 	print_md5hash ${S}/enigma-${MACHINE}-${VISIONREVISION}.txt >> ${S}/enigma-${MACHINE}-${VISIONREVISION}.txt
