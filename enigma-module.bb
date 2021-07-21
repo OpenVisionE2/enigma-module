@@ -110,6 +110,7 @@ export KCFLAGS = "-Wno-error"
 
 do_deploy() {
 	install -d ${DEPLOY_DIR_IMAGE}
+	rm -f ${DEPLOY_DIR_IMAGE}/enigma-*.txt
 	install -m 0644 ${S}/enigma-${MACHINE}-${VISIONREVISION}.txt ${DEPLOY_DIR_IMAGE}/
 }
 
