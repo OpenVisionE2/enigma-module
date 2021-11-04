@@ -25,6 +25,7 @@ do_configure_prepend(){
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@BOX_BRAND@|${BOX_BRAND}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@DISPLAY_BRAND@|${DISPLAY_BRAND}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@STB_PLATFORM@|${STB_PLATFORM}|g"
+	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@FRIENDLY_FAMILY@|${FRIENDLY_FAMILY}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@VISIONVERSION@|${VISIONVERSION}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@VISIONREVISION@|${VISIONREVISION}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@VISIONLANGUAGE@|${VISIONLANGUAGE}|g"
