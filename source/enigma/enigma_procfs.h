@@ -61,6 +61,7 @@ int get_enigma_distro(struct seq_file *m, void* data);
 int get_enigma_displaydistro(struct seq_file *m, void* data);
 int get_enigma_oe(struct seq_file *m, void* data);
 int get_enigma_kernel(struct seq_file *m, void* data);
+int get_enigma_driverdate(struct seq_file *m, void* data);
 int get_enigma_python(struct seq_file *m, void* data);
 int get_enigma_mediaservice(struct seq_file *m, void* data);
 int get_enigma_multilib(struct seq_file *m, void* data);

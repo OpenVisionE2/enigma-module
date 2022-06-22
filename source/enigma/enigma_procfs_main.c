@@ -35,6 +35,8 @@ struct ProcStructure_s enigmaProc[] =
 	//getOEVersion
 	{cProcEntry, "enigma/kernel", ENIGMA_PROC_PERMISSION, get_enigma_kernel, NULL, NULL, ""},
 	//getKernelVersion
+	{cProcEntry, "enigma/driverdate", ENIGMA_PROC_PERMISSION, get_enigma_driverdate, NULL, NULL, ""},
+	//getDriverDate
 	{cProcEntry, "enigma/python", ENIGMA_PROC_PERMISSION, get_enigma_python, NULL, NULL, ""},
 	//new
 	{cProcEntry, "enigma/mediaservice", ENIGMA_PROC_PERMISSION, get_enigma_mediaservice, NULL, NULL, ""},
@@ -299,6 +301,7 @@ void enigma_kernel_info(void)
 	printk(KERN_INFO "displaydistro=@DISPLAY_DISTRO@\n");
 	printk(KERN_INFO "oe=@BUILD_VERSION@\n");
 	printk(KERN_INFO "kernel=@KERNELVERSION@\n");
+	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
 	printk(KERN_INFO "python=@PREFERRED_VERSION_python@\n");
 	printk(KERN_INFO "mediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\n");
 	printk(KERN_INFO "multilib=@HAVE_MULTILIB@\n");
@@ -397,5 +400,5 @@ module_init(enigmaProcfs_init_module);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Open Vision developers");
-MODULE_DESCRIPTION("Open Vision information module\nmodel=@MACHINE@\ndisplaymodel=@DISPLAY_MODEL@\nbrand=@BOX_BRAND@\ndisplaybrand=@DISPLAY_BRAND@\nfriendlyfamily=@FRIENDLY_FAMILY@\nplatform=@STB_PLATFORM@\nimgversion=@VISIONVERSION@\nimgrevision=@VISIONREVISION@\nimglanguage=@VISIONLANGUAGE@\ndevelopername=@DEVELOPER_NAME@\nfeedsurl=@DISTRO_FEED_URI@\ndistro=@DISTRO_NAME@\ndisplaydistro=@DISPLAY_DISTRO@\noe=@BUILD_VERSION@\nkernel=@KERNELVERSION@\npython=@PREFERRED_VERSION_python@\nmediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\nmultilib=@HAVE_MULTILIB@\narchitecture=@DEFAULTTUNE@\nsocfamily=@SOC_FAMILY@\nblindscanbinary=@BLINDSCAN_BINARY@\nrctype=@RCTYPE@\nrcname=@RCNAME@\nrcidnum=@RCIDNUM@\nsmallflash=@HAVE_SMALLFLASH@\nmiddleflash=@HAVE_MIDDLEFLASH@\nimagedir=@IMAGEDIR@\nimagefs=@IMAGE_FSTYPES@\nmtdbootfs=@MTD_BOOTFS@\nmtdrootfs=@MTD_ROOTFS@\nmtdkernel=@MTD_KERNEL@\nrootfile=@ROOTFS_FILE@\nkernelfile=@KERNEL_FILE@\nmkubifs=@MKUBIFS_ARGS@\nubinize=@UBINIZE_ARGS@\nforcemode=@FORCE@\ncompiledate=@DATE@\nfpu=@TARGET_FPU@\ndisplaytype=@DISPLAY_TYPE@\ntranscoding=@HAVE_TRANSCODING@\nmultitranscoding=@HAVE_MULTITRANSCODING@\nhdmi=@HAVE_HDMI@\nyuv=@HAVE_YUV@\nrca=@HAVE_RCA@\navjack=@HAVE_AV_JACK@\nscart=@HAVE_SCART@\ndvi=@HAVE_DVI@\nsvideo=@HAVE_SVIDEO@\nhdmihdin=@HAVE_HDMI_IN_HD@\nhdmifhdin=@HAVE_HDMI_IN_FHD@\nwol=@HAVE_WOL@\nci=@HAVE_CI@\nvfdsymbol=@HAVE_VFDSYMBOL@\nfhdskin=@HAVE_FHDSKIN@\ndboxlcd=@SUPPORT_DBOXLCD@\nimageversion=@DISTRO_VERSION@\nimagebuild=@BUILD_VERSION@\nimagedevbuild=@DEVELOPER_BUILD_VERSION@\nimagetype=@DISTRO_TYPE@");
+MODULE_DESCRIPTION("Open Vision information module\nmodel=@MACHINE@\ndisplaymodel=@DISPLAY_MODEL@\nbrand=@BOX_BRAND@\ndisplaybrand=@DISPLAY_BRAND@\nfriendlyfamily=@FRIENDLY_FAMILY@\nplatform=@STB_PLATFORM@\nimgversion=@VISIONVERSION@\nimgrevision=@VISIONREVISION@\nimglanguage=@VISIONLANGUAGE@\ndevelopername=@DEVELOPER_NAME@\nfeedsurl=@DISTRO_FEED_URI@\ndistro=@DISTRO_NAME@\ndisplaydistro=@DISPLAY_DISTRO@\noe=@BUILD_VERSION@\nkernel=@KERNELVERSION@\ndriverdate=@DRIVERDATE@\npython=@PREFERRED_VERSION_python@\nmediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\nmultilib=@HAVE_MULTILIB@\narchitecture=@DEFAULTTUNE@\nsocfamily=@SOC_FAMILY@\nblindscanbinary=@BLINDSCAN_BINARY@\nrctype=@RCTYPE@\nrcname=@RCNAME@\nrcidnum=@RCIDNUM@\nsmallflash=@HAVE_SMALLFLASH@\nmiddleflash=@HAVE_MIDDLEFLASH@\nimagedir=@IMAGEDIR@\nimagefs=@IMAGE_FSTYPES@\nmtdbootfs=@MTD_BOOTFS@\nmtdrootfs=@MTD_ROOTFS@\nmtdkernel=@MTD_KERNEL@\nrootfile=@ROOTFS_FILE@\nkernelfile=@KERNEL_FILE@\nmkubifs=@MKUBIFS_ARGS@\nubinize=@UBINIZE_ARGS@\nforcemode=@FORCE@\ncompiledate=@DATE@\nfpu=@TARGET_FPU@\ndisplaytype=@DISPLAY_TYPE@\ntranscoding=@HAVE_TRANSCODING@\nmultitranscoding=@HAVE_MULTITRANSCODING@\nhdmi=@HAVE_HDMI@\nyuv=@HAVE_YUV@\nrca=@HAVE_RCA@\navjack=@HAVE_AV_JACK@\nscart=@HAVE_SCART@\ndvi=@HAVE_DVI@\nsvideo=@HAVE_SVIDEO@\nhdmihdin=@HAVE_HDMI_IN_HD@\nhdmifhdin=@HAVE_HDMI_IN_FHD@\nwol=@HAVE_WOL@\nci=@HAVE_CI@\nvfdsymbol=@HAVE_VFDSYMBOL@\nfhdskin=@HAVE_FHDSKIN@\ndboxlcd=@SUPPORT_DBOXLCD@\nimageversion=@DISTRO_VERSION@\nimagebuild=@BUILD_VERSION@\nimagedevbuild=@DEVELOPER_BUILD_VERSION@\nimagetype=@DISTRO_TYPE@");
 MODULE_VERSION("@VISIONVERSION@-@VISIONREVISION@");

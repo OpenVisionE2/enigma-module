@@ -135,6 +135,15 @@ int get_enigma_kernel(struct seq_file *m, void* data)
 	return 0;
 }
 
+int get_enigma_driverdate(struct seq_file *m, void* data)
+{
+	seq_printf(m, "@DRIVERDATE@\n");
+#ifdef DEBUG
+	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
+#endif
+	return 0;
+}
+
 int get_enigma_python(struct seq_file *m, void* data)
 {
 	seq_printf(m, "@PREFERRED_VERSION_python@\n");
@@ -548,6 +557,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	seq_printf(m, "displaydistro=@DISPLAY_DISTRO@\n");
 	seq_printf(m, "oe=@BUILD_VERSION@\n");
 	seq_printf(m, "kernel=@KERNELVERSION@\n");
+	seq_printf(m, "driverdate=@DRIVERDATE@\n");
 	seq_printf(m, "python=@PREFERRED_VERSION_python@\n");
 	seq_printf(m, "mediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\n");
 	seq_printf(m, "multilib=@HAVE_MULTILIB@\n");
@@ -608,6 +618,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	printk(KERN_INFO "displaydistro=@DISPLAY_DISTRO@\n");
 	printk(KERN_INFO "oe=@BUILD_VERSION@\n");
 	printk(KERN_INFO "kernel=@KERNELVERSION@\n");
+	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
 	printk(KERN_INFO "python=@PREFERRED_VERSION_python@\n");
 	printk(KERN_INFO "mediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\n");
 	printk(KERN_INFO "multilib=@HAVE_MULTILIB@\n");
