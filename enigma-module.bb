@@ -36,7 +36,6 @@ do_configure_prepend(){
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@BUILD_VERSION@|${BUILD_VERSION}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@KERNELVERSION@|${KERNELVERSION}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@DRIVERDATE@|${DRIVERDATE}|g"
-	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@PREFERRED_VERSION_python@|${${@bb.utils.contains("PYTHON_PN", "python3", "PREFERRED_VERSION_python3", "PREFERRED_VERSION_python", d)}}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@|${PREFERRED_PROVIDER_virtual/enigma2-mediaservice}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@HAVE_MULTILIB@|${HAVE_MULTILIB}|g"
 	find ${S}/ -type f -name "*.c" | xargs -r -L1 sed -i "s|@DEFAULTTUNE@|${DEFAULTTUNE}|g"
@@ -98,6 +97,7 @@ do_install() {
 	install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/enigma
 	${sbindir}/modinfo -d ${S}/enigma.ko > ${S}/enigma.txt
 	sed -i '1d' ${S}/enigma.txt
+	echo "python=${${@bb.utils.contains("PYTHON_PN", "python3", "PREFERRED_VERSION_python3", "PREFERRED_VERSION_python", d)}}" >> ${S}/enigma.txt
 	sort  ${S}/enigma.txt > enigma-${MACHINE}-${VISIONREVISION}.txt
 	print_md5hash ${S}/enigma-${MACHINE}-${VISIONREVISION}.txt >> ${S}/enigma-${MACHINE}-${VISIONREVISION}.txt
 	install -d ${D}${libdir}
