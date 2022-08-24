@@ -69,7 +69,7 @@ struct ProcStructure_s enigmaProc[] =
 	//getIMGRevision
 	{cProcEntry, "enigma/imgversion", ENIGMA_PROC_PERMISSION, get_enigma_imgversion, NULL, NULL, ""},
 	//getIMGVersion
-	{cProcEntry, "enigma/informations", ENIGMA_PROC_PERMISSION, get_enigma_allinfo, NULL, NULL, ""}
+	{cProcEntry, "enigma/informations", ENIGMA_PROC_PERMISSION, get_enigma_allinfo, NULL, NULL, ""},
 	//all
 	{cProcEntry, "enigma/kernel", ENIGMA_PROC_PERMISSION, get_enigma_kernel, NULL, NULL, ""},
 	//getKernelVersion
@@ -123,7 +123,7 @@ struct ProcStructure_s enigmaProc[] =
 	//getHaveVFDSymbol
 	{cProcEntry, "enigma/wol", ENIGMA_PROC_PERMISSION, get_enigma_wol, NULL, NULL, ""},
 	//getHaveWOL
-	{cProcEntry, "enigma/yuv", ENIGMA_PROC_PERMISSION, get_enigma_yuv, NULL, NULL, ""},
+	{cProcEntry, "enigma/yuv", ENIGMA_PROC_PERMISSION, get_enigma_yuv, NULL, NULL, ""}
 	//getHaveYUV
 };
 
