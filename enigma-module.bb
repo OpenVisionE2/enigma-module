@@ -103,7 +103,7 @@ do_install() {
 	${sbindir}/modinfo -d ${S}/enigma.ko > ${S}/enigma.txt
 	sed -i '1d' ${S}/enigma.txt
 	echo "python=${${@bb.utils.contains("PYTHON_PN", "python3", "PREFERRED_VERSION_python3", "PREFERRED_VERSION_python", d)}}" >> ${S}/enigma.txt
-	sort  ${S}/enigma.txt > enigma-${MACHINE}-${VISIONREVISION}.txt
+	sort ${S}/enigma.txt > enigma-${MACHINE}-${VISIONREVISION}.txt
 	print_md5hash ${S}/enigma-${MACHINE}-${VISIONREVISION}.txt >> ${S}/enigma-${MACHINE}-${VISIONREVISION}.txt
 	install -d ${D}${libdir}
 	install -m 0644 ${S}/enigma-${MACHINE}-${VISIONREVISION}.txt ${D}${libdir}/enigma.info
