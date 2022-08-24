@@ -5,125 +5,126 @@
 struct ProcStructure_s enigmaProc[] =
 {
 	{cProcDir, "enigma", NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "enigma/model", ENIGMA_PROC_PERMISSION, get_enigma_model, NULL, NULL, ""},
-	//getBoxType
-	{cProcEntry, "enigma/displaymodel", ENIGMA_PROC_PERMISSION, get_enigma_displaymodel, NULL, NULL, ""},
-	//getDisplayModel
-	{cProcEntry, "enigma/brand", ENIGMA_PROC_PERMISSION, get_enigma_brand, NULL, NULL, ""},
-	//getBoxBrand
-	{cProcEntry, "enigma/displaybrand", ENIGMA_PROC_PERMISSION, get_enigma_displaybrand, NULL, NULL, ""},
-	//getDisplayBrand
-	{cProcEntry, "enigma/friendlyfamily", ENIGMA_PROC_PERMISSION, get_enigma_friendlyfamily, NULL, NULL, ""},
-	//getFriendlyFamily
-	{cProcEntry, "enigma/platform", ENIGMA_PROC_PERMISSION, get_enigma_platform, NULL, NULL, ""},
-	//getMachineBuild
-	{cProcEntry, "enigma/imgversion", ENIGMA_PROC_PERMISSION, get_enigma_imgversion, NULL, NULL, ""},
-	//getIMGVersion
-	{cProcEntry, "enigma/imgrevision", ENIGMA_PROC_PERMISSION, get_enigma_imgrevision, NULL, NULL, ""},
-	//getIMGRevision
-	{cProcEntry, "enigma/imglanguage", ENIGMA_PROC_PERMISSION, get_enigma_imglanguage, NULL, NULL, ""},
-	//getIMGLanguage
-	{cProcEntry, "enigma/developername", ENIGMA_PROC_PERMISSION, get_enigma_developername, NULL, NULL, ""},
-	//getDeveloperName
-	{cProcEntry, "enigma/feedsurl", ENIGMA_PROC_PERMISSION, get_enigma_feedsurl, NULL, NULL, ""},
-	//getFeedsUrl
-	{cProcEntry, "enigma/distro", ENIGMA_PROC_PERMISSION, get_enigma_distro, NULL, NULL, ""},
-	//getImageDistro
-	{cProcEntry, "enigma/displaydistro", ENIGMA_PROC_PERMISSION, get_enigma_displaydistro, NULL, NULL, ""},
-	//getDisplayDistro
-	{cProcEntry, "enigma/oe", ENIGMA_PROC_PERMISSION, get_enigma_oe, NULL, NULL, ""},
-	//getOEVersion
-	{cProcEntry, "enigma/kernel", ENIGMA_PROC_PERMISSION, get_enigma_kernel, NULL, NULL, ""},
-	//getKernelVersion
-	{cProcEntry, "enigma/driverdate", ENIGMA_PROC_PERMISSION, get_enigma_driverdate, NULL, NULL, ""},
-	//getDriverDate
-	{cProcEntry, "enigma/mediaservice", ENIGMA_PROC_PERMISSION, get_enigma_mediaservice, NULL, NULL, ""},
-	//getE2Service
-	{cProcEntry, "enigma/multilib", ENIGMA_PROC_PERMISSION, get_enigma_multilib, NULL, NULL, ""},
-	//getHaveMultiLib
 	{cProcEntry, "enigma/architecture", ENIGMA_PROC_PERMISSION, get_enigma_architecture, NULL, NULL, ""},
 	//getImageArch
-	{cProcEntry, "enigma/socfamily", ENIGMA_PROC_PERMISSION, get_enigma_socfamily, NULL, NULL, ""},
-	//getSoCFamily
-	{cProcEntry, "enigma/blindscanbinary", ENIGMA_PROC_PERMISSION, get_enigma_blindscanbinary, NULL, NULL, ""},
-	//getBlindscanBin
-	{cProcEntry, "enigma/rctype", ENIGMA_PROC_PERMISSION, get_enigma_rctype, NULL, NULL, ""},
-	//getRCType
-	{cProcEntry, "enigma/rcname", ENIGMA_PROC_PERMISSION, get_enigma_rcname, NULL, NULL, ""},
-	//getRCName
-	{cProcEntry, "enigma/rcidnum", ENIGMA_PROC_PERMISSION, get_enigma_rcidnum, NULL, NULL, ""},
-	//getRCIDNum
-	{cProcEntry, "enigma/smallflash", ENIGMA_PROC_PERMISSION, get_enigma_smallflash, NULL, NULL, ""},
-	//getHaveSmallFlash
-	{cProcEntry, "enigma/middleflash", ENIGMA_PROC_PERMISSION, get_enigma_middleflash, NULL, NULL, ""},
-	//getHaveMiddleFlash
-	{cProcEntry, "enigma/imagedir", ENIGMA_PROC_PERMISSION, get_enigma_imagedir, NULL, NULL, ""},
-	//getImageFolder
-	{cProcEntry, "enigma/imagefs", ENIGMA_PROC_PERMISSION, get_enigma_imagefs, NULL, NULL, ""},
-	//getImageFileSystem
-	{cProcEntry, "enigma/mtdbootfs", ENIGMA_PROC_PERMISSION, get_enigma_mtdbootfs, NULL, NULL, ""},
-	//getMachineMtdBoot
-	{cProcEntry, "enigma/mtdrootfs", ENIGMA_PROC_PERMISSION, get_enigma_mtdrootfs, NULL, NULL, ""},
-	//getMachineMtdRoot
-	{cProcEntry, "enigma/mtdkernel", ENIGMA_PROC_PERMISSION, get_enigma_mtdkernel, NULL, NULL, ""},
-	//getMachineMtdKernel
-	{cProcEntry, "enigma/rootfile", ENIGMA_PROC_PERMISSION, get_enigma_rootfile, NULL, NULL, ""},
-	//getMachineRootFile
-	{cProcEntry, "enigma/kernelfile", ENIGMA_PROC_PERMISSION, get_enigma_kernelfile, NULL, NULL, ""},
-	//getMachineKernelFile
-	{cProcEntry, "enigma/mkubifs", ENIGMA_PROC_PERMISSION, get_enigma_mkubifs, NULL, NULL, ""},
-	//getMachineMKUBIFS
-	{cProcEntry, "enigma/ubinize", ENIGMA_PROC_PERMISSION, get_enigma_ubinize, NULL, NULL, ""},
-	//getMachineUBINIZE
-	{cProcEntry, "enigma/forcemode", ENIGMA_PROC_PERMISSION, get_enigma_forcemode, NULL, NULL, ""},
-	//getForceMode
-	{cProcEntry, "enigma/compiledate", ENIGMA_PROC_PERMISSION, get_enigma_compiledate, NULL, NULL, ""},
-	//new
-	{cProcEntry, "enigma/fpu", ENIGMA_PROC_PERMISSION, get_enigma_fpu, NULL, NULL, ""},
-	//getImageFPU
-	{cProcEntry, "enigma/displaytype", ENIGMA_PROC_PERMISSION, get_enigma_displaytype, NULL, NULL, ""},
-	//getDisplayType
-	{cProcEntry, "enigma/transcoding", ENIGMA_PROC_PERMISSION, get_enigma_transcoding, NULL, NULL, ""},
-	//getHaveTranscoding
-	{cProcEntry, "enigma/multitranscoding", ENIGMA_PROC_PERMISSION, get_enigma_multitranscoding, NULL, NULL, ""},
-	//getHaveMultiTranscoding
-	{cProcEntry, "enigma/hdmi", ENIGMA_PROC_PERMISSION, get_enigma_hdmi, NULL, NULL, ""},
-	//getHaveHDMI
-	{cProcEntry, "enigma/yuv", ENIGMA_PROC_PERMISSION, get_enigma_yuv, NULL, NULL, ""},
-	//getHaveYUV
-	{cProcEntry, "enigma/rca", ENIGMA_PROC_PERMISSION, get_enigma_rca, NULL, NULL, ""},
-	//getHaveRCA
 	{cProcEntry, "enigma/avjack", ENIGMA_PROC_PERMISSION, get_enigma_avjack, NULL, NULL, ""},
 	//getHaveAVJACK
-	{cProcEntry, "enigma/scart", ENIGMA_PROC_PERMISSION, get_enigma_scart, NULL, NULL, ""},
-	//getHaveSCART
-	{cProcEntry, "enigma/dvi", ENIGMA_PROC_PERMISSION, get_enigma_dvi, NULL, NULL, ""},
-	//getHaveDVI
-	{cProcEntry, "enigma/svideo", ENIGMA_PROC_PERMISSION, get_enigma_svideo, NULL, NULL, ""},
-	//getHaveSVIDEO
-	{cProcEntry, "enigma/hdmihdin", ENIGMA_PROC_PERMISSION, get_enigma_hdmihdin, NULL, NULL, ""},
-	//getHaveHDMIinHD
-	{cProcEntry, "enigma/hdmifhdin", ENIGMA_PROC_PERMISSION, get_enigma_hdmifhdin, NULL, NULL, ""},
-	//getHaveHDMIinFHD
-	{cProcEntry, "enigma/wol", ENIGMA_PROC_PERMISSION, get_enigma_wol, NULL, NULL, ""},
-	//getHaveWOL
+	{cProcEntry, "enigma/blindscanbinary", ENIGMA_PROC_PERMISSION, get_enigma_blindscanbinary, NULL, NULL, ""},
+	//getBlindscanBin
+	{cProcEntry, "enigma/brand", ENIGMA_PROC_PERMISSION, get_enigma_brand, NULL, NULL, ""},
+	//getBoxBrand
 	{cProcEntry, "enigma/ci", ENIGMA_PROC_PERMISSION, get_enigma_ci, NULL, NULL, ""},
 	//getHaveCI
-	{cProcEntry, "enigma/vfdsymbol", ENIGMA_PROC_PERMISSION, get_enigma_vfdsymbol, NULL, NULL, ""},
-	//getHaveVFDSymbol
-	{cProcEntry, "enigma/fhdskin", ENIGMA_PROC_PERMISSION, get_enigma_fhdskin, NULL, NULL, ""},
-	//getFHDSkin
+	{cProcEntry, "enigma/compiledate", ENIGMA_PROC_PERMISSION, get_enigma_compiledate, NULL, NULL, ""},
+	//new
 	{cProcEntry, "enigma/dboxlcd", ENIGMA_PROC_PERMISSION, get_enigma_dboxlcd, NULL, NULL, ""},
 	//getDBoxLCD
-	{cProcEntry, "enigma/imageversion", ENIGMA_PROC_PERMISSION, get_enigma_imageversion, NULL, NULL, ""},
-	//getImageVersion
+	{cProcEntry, "enigma/developername", ENIGMA_PROC_PERMISSION, get_enigma_developername, NULL, NULL, ""},
+	//getDeveloperName
+	{cProcEntry, "enigma/displaybrand", ENIGMA_PROC_PERMISSION, get_enigma_displaybrand, NULL, NULL, ""},
+	//getDisplayBrand
+	{cProcEntry, "enigma/displaydistro", ENIGMA_PROC_PERMISSION, get_enigma_displaydistro, NULL, NULL, ""},
+	//getDisplayDistro
+	{cProcEntry, "enigma/displaymodel", ENIGMA_PROC_PERMISSION, get_enigma_displaymodel, NULL, NULL, ""},
+	//getDisplayModel
+	{cProcEntry, "enigma/displaytype", ENIGMA_PROC_PERMISSION, get_enigma_displaytype, NULL, NULL, ""},
+	//getDisplayType
+	{cProcEntry, "enigma/distro", ENIGMA_PROC_PERMISSION, get_enigma_distro, NULL, NULL, ""},
+	//getImageDistro
+	{cProcEntry, "enigma/driverdate", ENIGMA_PROC_PERMISSION, get_enigma_driverdate, NULL, NULL, ""},
+	//getDriverDate
+	{cProcEntry, "enigma/dvi", ENIGMA_PROC_PERMISSION, get_enigma_dvi, NULL, NULL, ""},
+	//getHaveDVI
+	{cProcEntry, "enigma/feedsurl", ENIGMA_PROC_PERMISSION, get_enigma_feedsurl, NULL, NULL, ""},
+	//getFeedsUrl
+	{cProcEntry, "enigma/fhdskin", ENIGMA_PROC_PERMISSION, get_enigma_fhdskin, NULL, NULL, ""},
+	//getFHDSkin
+	{cProcEntry, "enigma/forcemode", ENIGMA_PROC_PERMISSION, get_enigma_forcemode, NULL, NULL, ""},
+	//getForceMode
+	{cProcEntry, "enigma/fpu", ENIGMA_PROC_PERMISSION, get_enigma_fpu, NULL, NULL, ""},
+	//getImageFPU
+	{cProcEntry, "enigma/friendlyfamily", ENIGMA_PROC_PERMISSION, get_enigma_friendlyfamily, NULL, NULL, ""},
+	//getFriendlyFamily
+	{cProcEntry, "enigma/hdmi", ENIGMA_PROC_PERMISSION, get_enigma_hdmi, NULL, NULL, ""},
+	//getHaveHDMI
+	{cProcEntry, "enigma/hdmifhdin", ENIGMA_PROC_PERMISSION, get_enigma_hdmifhdin, NULL, NULL, ""},
+	//getHaveHDMIinFHD
+	{cProcEntry, "enigma/hdmihdin", ENIGMA_PROC_PERMISSION, get_enigma_hdmihdin, NULL, NULL, ""},
+	//getHaveHDMIinHD
 	{cProcEntry, "enigma/imagebuild", ENIGMA_PROC_PERMISSION, get_enigma_imagebuild, NULL, NULL, ""},
 	//getImageBuild
 	{cProcEntry, "enigma/imagedevbuild", ENIGMA_PROC_PERMISSION, get_enigma_imagedevbuild, NULL, NULL, ""},
 	//getImageDevBuild
+	{cProcEntry, "enigma/imagedir", ENIGMA_PROC_PERMISSION, get_enigma_imagedir, NULL, NULL, ""},
+	//getImageFolder
+	{cProcEntry, "enigma/imagefs", ENIGMA_PROC_PERMISSION, get_enigma_imagefs, NULL, NULL, ""},
+	//getImageFileSystem
 	{cProcEntry, "enigma/imagetype", ENIGMA_PROC_PERMISSION, get_enigma_imagetype, NULL, NULL, ""},
 	//getImageType
+	{cProcEntry, "enigma/imageversion", ENIGMA_PROC_PERMISSION, get_enigma_imageversion, NULL, NULL, ""},
+	//getImageVersion
+	{cProcEntry, "enigma/imglanguage", ENIGMA_PROC_PERMISSION, get_enigma_imglanguage, NULL, NULL, ""},
+	//getIMGLanguage
+	{cProcEntry, "enigma/imgrevision", ENIGMA_PROC_PERMISSION, get_enigma_imgrevision, NULL, NULL, ""},
+	//getIMGRevision
+	{cProcEntry, "enigma/imgversion", ENIGMA_PROC_PERMISSION, get_enigma_imgversion, NULL, NULL, ""},
+	//getIMGVersion
 	{cProcEntry, "enigma/informations", ENIGMA_PROC_PERMISSION, get_enigma_allinfo, NULL, NULL, ""}
+	//all
+	{cProcEntry, "enigma/kernel", ENIGMA_PROC_PERMISSION, get_enigma_kernel, NULL, NULL, ""},
+	//getKernelVersion
+	{cProcEntry, "enigma/kernelfile", ENIGMA_PROC_PERMISSION, get_enigma_kernelfile, NULL, NULL, ""},
+	//getMachineKernelFile
+	{cProcEntry, "enigma/mediaservice", ENIGMA_PROC_PERMISSION, get_enigma_mediaservice, NULL, NULL, ""},
+	//getE2Service
+	{cProcEntry, "enigma/middleflash", ENIGMA_PROC_PERMISSION, get_enigma_middleflash, NULL, NULL, ""},
+	//getHaveMiddleFlash
+	{cProcEntry, "enigma/mkubifs", ENIGMA_PROC_PERMISSION, get_enigma_mkubifs, NULL, NULL, ""},
+	//getMachineMKUBIFS
+	{cProcEntry, "enigma/model", ENIGMA_PROC_PERMISSION, get_enigma_model, NULL, NULL, ""},
+	//getBoxType
+	{cProcEntry, "enigma/mtdbootfs", ENIGMA_PROC_PERMISSION, get_enigma_mtdbootfs, NULL, NULL, ""},
+	//getMachineMtdBoot
+	{cProcEntry, "enigma/mtdkernel", ENIGMA_PROC_PERMISSION, get_enigma_mtdkernel, NULL, NULL, ""},
+	//getMachineMtdKernel
+	{cProcEntry, "enigma/mtdrootfs", ENIGMA_PROC_PERMISSION, get_enigma_mtdrootfs, NULL, NULL, ""},
+	//getMachineMtdRoot
+	{cProcEntry, "enigma/multilib", ENIGMA_PROC_PERMISSION, get_enigma_multilib, NULL, NULL, ""},
+	//getHaveMultiLib
+	{cProcEntry, "enigma/multitranscoding", ENIGMA_PROC_PERMISSION, get_enigma_multitranscoding, NULL, NULL, ""},
+	//getHaveMultiTranscoding
+	{cProcEntry, "enigma/oe", ENIGMA_PROC_PERMISSION, get_enigma_oe, NULL, NULL, ""},
+	//getOEVersion
+	{cProcEntry, "enigma/platform", ENIGMA_PROC_PERMISSION, get_enigma_platform, NULL, NULL, ""},
+	//getMachineBuild
+	{cProcEntry, "enigma/rca", ENIGMA_PROC_PERMISSION, get_enigma_rca, NULL, NULL, ""},
+	//getHaveRCA
+	{cProcEntry, "enigma/rcidnum", ENIGMA_PROC_PERMISSION, get_enigma_rcidnum, NULL, NULL, ""},
+	//getRCIDNum
+	{cProcEntry, "enigma/rcname", ENIGMA_PROC_PERMISSION, get_enigma_rcname, NULL, NULL, ""},
+	//getRCName
+	{cProcEntry, "enigma/rctype", ENIGMA_PROC_PERMISSION, get_enigma_rctype, NULL, NULL, ""},
+	//getRCType
+	{cProcEntry, "enigma/rootfile", ENIGMA_PROC_PERMISSION, get_enigma_rootfile, NULL, NULL, ""},
+	//getMachineRootFile
+	{cProcEntry, "enigma/scart", ENIGMA_PROC_PERMISSION, get_enigma_scart, NULL, NULL, ""},
+	//getHaveSCART
+	{cProcEntry, "enigma/smallflash", ENIGMA_PROC_PERMISSION, get_enigma_smallflash, NULL, NULL, ""},
+	//getHaveSmallFlash
+	{cProcEntry, "enigma/socfamily", ENIGMA_PROC_PERMISSION, get_enigma_socfamily, NULL, NULL, ""},
+	//getSoCFamily
+	{cProcEntry, "enigma/svideo", ENIGMA_PROC_PERMISSION, get_enigma_svideo, NULL, NULL, ""},
+	//getHaveSVIDEO
+	{cProcEntry, "enigma/transcoding", ENIGMA_PROC_PERMISSION, get_enigma_transcoding, NULL, NULL, ""},
+	//getHaveTranscoding
+	{cProcEntry, "enigma/ubinize", ENIGMA_PROC_PERMISSION, get_enigma_ubinize, NULL, NULL, ""},
+	//getMachineUBINIZE
+	{cProcEntry, "enigma/vfdsymbol", ENIGMA_PROC_PERMISSION, get_enigma_vfdsymbol, NULL, NULL, ""},
+	//getHaveVFDSymbol
+	{cProcEntry, "enigma/wol", ENIGMA_PROC_PERMISSION, get_enigma_wol, NULL, NULL, ""},
+	//getHaveWOL
+	{cProcEntry, "enigma/yuv", ENIGMA_PROC_PERMISSION, get_enigma_yuv, NULL, NULL, ""},
+	//getHaveYUV
 };
 
 struct proc_dir_entry * find_proc_dir(char * name)
@@ -284,65 +285,65 @@ static const struct file_operations enigmaProcfs_fops = {
 #endif
 void enigma_kernel_info(void)
 {
-	printk(KERN_INFO "model=@MACHINE@\n");
-	printk(KERN_INFO "displaymodel=@DISPLAY_MODEL@\n");
-	printk(KERN_INFO "brand=@BOX_BRAND@\n");
-	printk(KERN_INFO "displaybrand=@DISPLAY_BRAND@\n");
-	printk(KERN_INFO "friendlyfamily=@FRIENDLY_FAMILY@\n");
-	printk(KERN_INFO "platform=@STB_PLATFORM@\n");
-	printk(KERN_INFO "imgversion=@VISIONVERSION@\n");
-	printk(KERN_INFO "imgrevision=@VISIONREVISION@\n");
-	printk(KERN_INFO "imglanguage=@VISIONLANGUAGE@\n");
-	printk(KERN_INFO "developername=@DEVELOPER_NAME@\n");
-	printk(KERN_INFO "feedsurl=@DISTRO_FEED_URI@\n");
-	printk(KERN_INFO "distro=@DISTRO_NAME@\n");
-	printk(KERN_INFO "displaydistro=@DISPLAY_DISTRO@\n");
-	printk(KERN_INFO "oe=@BUILD_VERSION@\n");
-	printk(KERN_INFO "kernel=@KERNELVERSION@\n");
-	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
-	printk(KERN_INFO "mediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\n");
-	printk(KERN_INFO "multilib=@HAVE_MULTILIB@\n");
 	printk(KERN_INFO "architecture=@DEFAULTTUNE@\n");
-	printk(KERN_INFO "socfamily=@SOC_FAMILY@\n");
-	printk(KERN_INFO "blindscanbinary=@BLINDSCAN_BINARY@\n");
-	printk(KERN_INFO "rctype=@RCTYPE@\n");
-	printk(KERN_INFO "rcname=@RCNAME@\n");
-	printk(KERN_INFO "rcidnum=@RCIDNUM@\n");
-	printk(KERN_INFO "smallflash=@HAVE_SMALLFLASH@\n");
-	printk(KERN_INFO "middleflash=@HAVE_MIDDLEFLASH@\n");
-	printk(KERN_INFO "imagedir=@IMAGEDIR@\n");
-	printk(KERN_INFO "imagefs=@IMAGE_FSTYPES@\n");
-	printk(KERN_INFO "mtdbootfs=@MTD_BOOTFS@\n");
-	printk(KERN_INFO "mtdrootfs=@MTD_ROOTFS@\n");
-	printk(KERN_INFO "mtdkernel=@MTD_KERNEL@\n");
-	printk(KERN_INFO "rootfile=@ROOTFS_FILE@\n");
-	printk(KERN_INFO "kernelfile=@KERNEL_FILE@\n");
-	printk(KERN_INFO "mkubifs=@MKUBIFS_ARGS@\n");
-	printk(KERN_INFO "ubinize=@UBINIZE_ARGS@\n");
-	printk(KERN_INFO "forcemode=@FORCE@\n");
-	printk(KERN_INFO "compiledate=@DATE@\n");
-	printk(KERN_INFO "fpu=@TARGET_FPU@\n");
-	printk(KERN_INFO "displaytype=@DISPLAY_TYPE@\n");
-	printk(KERN_INFO "transcoding=@HAVE_TRANSCODING@\n");
-	printk(KERN_INFO "multitranscoding=@HAVE_MULTITRANSCODING@\n");
-	printk(KERN_INFO "hdmi=@HAVE_HDMI@\n");
-	printk(KERN_INFO "yuv=@HAVE_YUV@\n");
-	printk(KERN_INFO "rca=@HAVE_RCA@\n");
 	printk(KERN_INFO "avjack=@HAVE_AV_JACK@\n");
-	printk(KERN_INFO "scart=@HAVE_SCART@\n");
-	printk(KERN_INFO "dvi=@HAVE_DVI@\n");
-	printk(KERN_INFO "svideo=@HAVE_SVIDEO@\n");
-	printk(KERN_INFO "hdmihdin=@HAVE_HDMI_IN_HD@\n");
-	printk(KERN_INFO "hdmifhdin=@HAVE_HDMI_IN_FHD@\n");
-	printk(KERN_INFO "wol=@HAVE_WOL@\n");
+	printk(KERN_INFO "blindscanbinary=@BLINDSCAN_BINARY@\n");
+	printk(KERN_INFO "brand=@BOX_BRAND@\n");
 	printk(KERN_INFO "ci=@HAVE_CI@\n");
-	printk(KERN_INFO "vfdsymbol=@HAVE_VFDSYMBOL@\n");
-	printk(KERN_INFO "fhdskin=@HAVE_FHDSKIN@\n");
+	printk(KERN_INFO "compiledate=@DATE@\n");
 	printk(KERN_INFO "dboxlcd=@SUPPORT_DBOXLCD@\n");
-	printk(KERN_INFO "imageversion=@DISTRO_VERSION@\n");
+	printk(KERN_INFO "developername=@DEVELOPER_NAME@\n");
+	printk(KERN_INFO "displaybrand=@DISPLAY_BRAND@\n");
+	printk(KERN_INFO "displaydistro=@DISPLAY_DISTRO@\n");
+	printk(KERN_INFO "displaymodel=@DISPLAY_MODEL@\n");
+	printk(KERN_INFO "displaytype=@DISPLAY_TYPE@\n");
+	printk(KERN_INFO "distro=@DISTRO_NAME@\n");
+	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
+	printk(KERN_INFO "dvi=@HAVE_DVI@\n");
+	printk(KERN_INFO "feedsurl=@DISTRO_FEED_URI@\n");
+	printk(KERN_INFO "fhdskin=@HAVE_FHDSKIN@\n");
+	printk(KERN_INFO "forcemode=@FORCE@\n");
+	printk(KERN_INFO "fpu=@TARGET_FPU@\n");
+	printk(KERN_INFO "friendlyfamily=@FRIENDLY_FAMILY@\n");
+	printk(KERN_INFO "hdmifhdin=@HAVE_HDMI_IN_FHD@\n");
+	printk(KERN_INFO "hdmi=@HAVE_HDMI@\n");
+	printk(KERN_INFO "hdmihdin=@HAVE_HDMI_IN_HD@\n");
 	printk(KERN_INFO "imagebuild=@BUILD_VERSION@\n");
 	printk(KERN_INFO "imagedevbuild=@DEVELOPER_BUILD_VERSION@\n");
+	printk(KERN_INFO "imagedir=@IMAGEDIR@\n");
+	printk(KERN_INFO "imagefs=@IMAGE_FSTYPES@\n");
 	printk(KERN_INFO "imagetype=@DISTRO_TYPE@\n");
+	printk(KERN_INFO "imageversion=@DISTRO_VERSION@\n");
+	printk(KERN_INFO "imglanguage=@VISIONLANGUAGE@\n");
+	printk(KERN_INFO "imgrevision=@VISIONREVISION@\n");
+	printk(KERN_INFO "imgversion=@VISIONVERSION@\n");
+	printk(KERN_INFO "kernelfile=@KERNEL_FILE@\n");
+	printk(KERN_INFO "kernel=@KERNELVERSION@\n");
+	printk(KERN_INFO "mediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\n");
+	printk(KERN_INFO "middleflash=@HAVE_MIDDLEFLASH@\n");
+	printk(KERN_INFO "mkubifs=@MKUBIFS_ARGS@\n");
+	printk(KERN_INFO "model=@MACHINE@\n");
+	printk(KERN_INFO "mtdbootfs=@MTD_BOOTFS@\n");
+	printk(KERN_INFO "mtdkernel=@MTD_KERNEL@\n");
+	printk(KERN_INFO "mtdrootfs=@MTD_ROOTFS@\n");
+	printk(KERN_INFO "multilib=@HAVE_MULTILIB@\n");
+	printk(KERN_INFO "multitranscoding=@HAVE_MULTITRANSCODING@\n");
+	printk(KERN_INFO "oe=@BUILD_VERSION@\n");
+	printk(KERN_INFO "platform=@STB_PLATFORM@\n");
+	printk(KERN_INFO "rca=@HAVE_RCA@\n");
+	printk(KERN_INFO "rcidnum=@RCIDNUM@\n");
+	printk(KERN_INFO "rcname=@RCNAME@\n");
+	printk(KERN_INFO "rctype=@RCTYPE@\n");
+	printk(KERN_INFO "rootfile=@ROOTFS_FILE@\n");
+	printk(KERN_INFO "scart=@HAVE_SCART@\n");
+	printk(KERN_INFO "smallflash=@HAVE_SMALLFLASH@\n");
+	printk(KERN_INFO "socfamily=@SOC_FAMILY@\n");
+	printk(KERN_INFO "svideo=@HAVE_SVIDEO@\n");
+	printk(KERN_INFO "transcoding=@HAVE_TRANSCODING@\n");
+	printk(KERN_INFO "ubinize=@UBINIZE_ARGS@\n");
+	printk(KERN_INFO "vfdsymbol=@HAVE_VFDSYMBOL@\n");
+	printk(KERN_INFO "wol=@HAVE_WOL@\n");
+	printk(KERN_INFO "yuv=@HAVE_YUV@\n");
 }
 
 static int __init enigmaProcfs_init_module(void)
@@ -397,5 +398,5 @@ module_init(enigmaProcfs_init_module);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Open Vision developers");
-MODULE_DESCRIPTION("Open Vision information module\nmodel=@MACHINE@\ndisplaymodel=@DISPLAY_MODEL@\nbrand=@BOX_BRAND@\ndisplaybrand=@DISPLAY_BRAND@\nfriendlyfamily=@FRIENDLY_FAMILY@\nplatform=@STB_PLATFORM@\nimgversion=@VISIONVERSION@\nimgrevision=@VISIONREVISION@\nimglanguage=@VISIONLANGUAGE@\ndevelopername=@DEVELOPER_NAME@\nfeedsurl=@DISTRO_FEED_URI@\ndistro=@DISTRO_NAME@\ndisplaydistro=@DISPLAY_DISTRO@\noe=@BUILD_VERSION@\nkernel=@KERNELVERSION@\ndriverdate=@DRIVERDATE@\nmediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\nmultilib=@HAVE_MULTILIB@\narchitecture=@DEFAULTTUNE@\nsocfamily=@SOC_FAMILY@\nblindscanbinary=@BLINDSCAN_BINARY@\nrctype=@RCTYPE@\nrcname=@RCNAME@\nrcidnum=@RCIDNUM@\nsmallflash=@HAVE_SMALLFLASH@\nmiddleflash=@HAVE_MIDDLEFLASH@\nimagedir=@IMAGEDIR@\nimagefs=@IMAGE_FSTYPES@\nmtdbootfs=@MTD_BOOTFS@\nmtdrootfs=@MTD_ROOTFS@\nmtdkernel=@MTD_KERNEL@\nrootfile=@ROOTFS_FILE@\nkernelfile=@KERNEL_FILE@\nmkubifs=@MKUBIFS_ARGS@\nubinize=@UBINIZE_ARGS@\nforcemode=@FORCE@\ncompiledate=@DATE@\nfpu=@TARGET_FPU@\ndisplaytype=@DISPLAY_TYPE@\ntranscoding=@HAVE_TRANSCODING@\nmultitranscoding=@HAVE_MULTITRANSCODING@\nhdmi=@HAVE_HDMI@\nyuv=@HAVE_YUV@\nrca=@HAVE_RCA@\navjack=@HAVE_AV_JACK@\nscart=@HAVE_SCART@\ndvi=@HAVE_DVI@\nsvideo=@HAVE_SVIDEO@\nhdmihdin=@HAVE_HDMI_IN_HD@\nhdmifhdin=@HAVE_HDMI_IN_FHD@\nwol=@HAVE_WOL@\nci=@HAVE_CI@\nvfdsymbol=@HAVE_VFDSYMBOL@\nfhdskin=@HAVE_FHDSKIN@\ndboxlcd=@SUPPORT_DBOXLCD@\nimageversion=@DISTRO_VERSION@\nimagebuild=@BUILD_VERSION@\nimagedevbuild=@DEVELOPER_BUILD_VERSION@\nimagetype=@DISTRO_TYPE@");
+MODULE_DESCRIPTION("Open Vision information module\narchitecture=@DEFAULTTUNE@\navjack=@HAVE_AV_JACK@\nblindscanbinary=@BLINDSCAN_BINARY@\nbrand=@BOX_BRAND@\nci=@HAVE_CI@\ncompiledate=@DATE@\ndboxlcd=@SUPPORT_DBOXLCD@\ndevelopername=@DEVELOPER_NAME@\ndisplaybrand=@DISPLAY_BRAND@\ndisplaydistro=@DISPLAY_DISTRO@\ndisplaymodel=@DISPLAY_MODEL@\ndisplaytype=@DISPLAY_TYPE@\ndistro=@DISTRO_NAME@\ndriverdate=@DRIVERDATE@\ndvi=@HAVE_DVI@\nfeedsurl=@DISTRO_FEED_URI@\nfhdskin=@HAVE_FHDSKIN@\nforcemode=@FORCE@\nfpu=@TARGET_FPU@\nfriendlyfamily=@FRIENDLY_FAMILY@\nhdmifhdin=@HAVE_HDMI_IN_FHD@\nhdmi=@HAVE_HDMI@\nhdmihdin=@HAVE_HDMI_IN_HD@\nimagebuild=@BUILD_VERSION@\nimagedevbuild=@DEVELOPER_BUILD_VERSION@\nimagedir=@IMAGEDIR@\nimagefs=@IMAGE_FSTYPES@\nimagetype=@DISTRO_TYPE@\nimageversion=@DISTRO_VERSION@\nimglanguage=@VISIONLANGUAGE@\nimgrevision=@VISIONREVISION@\nimgversion=@VISIONVERSION@\nkernelfile=@KERNEL_FILE@\nkernel=@KERNELVERSION@\nmediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\nmiddleflash=@HAVE_MIDDLEFLASH@\nmkubifs=@MKUBIFS_ARGS@\nmodel=@MACHINE@\nmtdbootfs=@MTD_BOOTFS@\nmtdkernel=@MTD_KERNEL@\nmtdrootfs=@MTD_ROOTFS@\nmultilib=@HAVE_MULTILIB@\nmultitranscoding=@HAVE_MULTITRANSCODING@\noe=@BUILD_VERSION@\nplatform=@STB_PLATFORM@\nrca=@HAVE_RCA@\nrcidnum=@RCIDNUM@\nrcname=@RCNAME@\nrctype=@RCTYPE@\nrootfile=@ROOTFS_FILE@\nscart=@HAVE_SCART@\nsmallflash=@HAVE_SMALLFLASH@\nsocfamily=@SOC_FAMILY@\nsvideo=@HAVE_SVIDEO@\ntranscoding=@HAVE_TRANSCODING@\nubinize=@UBINIZE_ARGS@\nvfdsymbol=@HAVE_VFDSYMBOL@\nwol=@HAVE_WOL@\nyuv=@HAVE_YUV@");
 MODULE_VERSION("@VISIONVERSION@-@VISIONREVISION@");
