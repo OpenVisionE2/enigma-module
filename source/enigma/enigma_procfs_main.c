@@ -35,6 +35,8 @@ struct ProcStructure_s enigmaProc[] =
 	//getDriverDate
 	{cProcEntry, "enigma/dvi", ENIGMA_PROC_PERMISSION, get_enigma_dvi, NULL, NULL, ""},
 	//getHaveDVI
+	{cProcEntry, "enigma/emmc", ENIGMA_PROC_PERMISSION, get_enigma_emmc, NULL, NULL, ""},
+	//getEMMC
 	{cProcEntry, "enigma/feedsurl", ENIGMA_PROC_PERMISSION, get_enigma_feedsurl, NULL, NULL, ""},
 	//getFeedsUrl
 	{cProcEntry, "enigma/fhdskin", ENIGMA_PROC_PERMISSION, get_enigma_fhdskin, NULL, NULL, ""},
@@ -81,6 +83,8 @@ struct ProcStructure_s enigmaProc[] =
 	//getHaveMiddleFlash
 	{cProcEntry, "enigma/mkubifs", ENIGMA_PROC_PERMISSION, get_enigma_mkubifs, NULL, NULL, ""},
 	//getMachineMKUBIFS
+	{cProcEntry, "enigma/mmc", ENIGMA_PROC_PERMISSION, get_enigma_mmc, NULL, NULL, ""},
+	//getMMC
 	{cProcEntry, "enigma/model", ENIGMA_PROC_PERMISSION, get_enigma_model, NULL, NULL, ""},
 	//getBoxType
 	{cProcEntry, "enigma/mtdbootfs", ENIGMA_PROC_PERMISSION, get_enigma_mtdbootfs, NULL, NULL, ""},
@@ -291,7 +295,7 @@ void enigma_kernel_info(void)
 	printk(KERN_INFO "brand=@BOX_BRAND@\n");
 	printk(KERN_INFO "ci=@HAVE_CI@\n");
 	printk(KERN_INFO "compiledate=@DATE@\n");
-	printk(KERN_INFO "dboxlcd=@SUPPORT_DBOXLCD@\n");
+	printk(KERN_INFO "dboxlcd=@HAVE_DBOXLCD@\n");
 	printk(KERN_INFO "developername=@DEVELOPER_NAME@\n");
 	printk(KERN_INFO "displaybrand=@DISPLAY_BRAND@\n");
 	printk(KERN_INFO "displaydistro=@DISPLAY_DISTRO@\n");
@@ -300,6 +304,7 @@ void enigma_kernel_info(void)
 	printk(KERN_INFO "distro=@DISTRO_NAME@\n");
 	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
 	printk(KERN_INFO "dvi=@HAVE_DVI@\n");
+	printk(KERN_INFO "emmc=@HAVE_EMMC@\n");
 	printk(KERN_INFO "feedsurl=@DISTRO_FEED_URI@\n");
 	printk(KERN_INFO "fhdskin=@HAVE_FHDSKIN@\n");
 	printk(KERN_INFO "forcemode=@FORCE@\n");
@@ -322,6 +327,7 @@ void enigma_kernel_info(void)
 	printk(KERN_INFO "mediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\n");
 	printk(KERN_INFO "middleflash=@HAVE_MIDDLEFLASH@\n");
 	printk(KERN_INFO "mkubifs=@MKUBIFS_ARGS@\n");
+	printk(KERN_INFO "mmc=@HAVE_MMC@\n");
 	printk(KERN_INFO "model=@MACHINE@\n");
 	printk(KERN_INFO "mtdbootfs=@MTD_BOOTFS@\n");
 	printk(KERN_INFO "mtdkernel=@MTD_KERNEL@\n");
@@ -398,5 +404,5 @@ module_init(enigmaProcfs_init_module);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Open Vision developers");
-MODULE_DESCRIPTION("Open Vision information module\narchitecture=@DEFAULTTUNE@\navjack=@HAVE_AV_JACK@\nblindscanbinary=@BLINDSCAN_BINARY@\nbrand=@BOX_BRAND@\nci=@HAVE_CI@\ncompiledate=@DATE@\ndboxlcd=@SUPPORT_DBOXLCD@\ndevelopername=@DEVELOPER_NAME@\ndisplaybrand=@DISPLAY_BRAND@\ndisplaydistro=@DISPLAY_DISTRO@\ndisplaymodel=@DISPLAY_MODEL@\ndisplaytype=@DISPLAY_TYPE@\ndistro=@DISTRO_NAME@\ndriverdate=@DRIVERDATE@\ndvi=@HAVE_DVI@\nfeedsurl=@DISTRO_FEED_URI@\nfhdskin=@HAVE_FHDSKIN@\nforcemode=@FORCE@\nfpu=@TARGET_FPU@\nfriendlyfamily=@FRIENDLY_FAMILY@\nhdmifhdin=@HAVE_HDMI_IN_FHD@\nhdmi=@HAVE_HDMI@\nhdmihdin=@HAVE_HDMI_IN_HD@\nimagebuild=@BUILD_VERSION@\nimagedevbuild=@DEVELOPER_BUILD_VERSION@\nimagedir=@IMAGEDIR@\nimagefs=@IMAGE_FSTYPES@\nimagetype=@DISTRO_TYPE@\nimageversion=@DISTRO_VERSION@\nimglanguage=@VISIONLANGUAGE@\nimgrevision=@VISIONREVISION@\nimgversion=@VISIONVERSION@\nkernelfile=@KERNEL_FILE@\nkernel=@KERNELVERSION@\nmediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\nmiddleflash=@HAVE_MIDDLEFLASH@\nmkubifs=@MKUBIFS_ARGS@\nmodel=@MACHINE@\nmtdbootfs=@MTD_BOOTFS@\nmtdkernel=@MTD_KERNEL@\nmtdrootfs=@MTD_ROOTFS@\nmultilib=@HAVE_MULTILIB@\nmultitranscoding=@HAVE_MULTITRANSCODING@\noe=@BUILD_VERSION@\nplatform=@STB_PLATFORM@\nrca=@HAVE_RCA@\nrcidnum=@RCIDNUM@\nrcname=@RCNAME@\nrctype=@RCTYPE@\nrootfile=@ROOTFS_FILE@\nscart=@HAVE_SCART@\nsmallflash=@HAVE_SMALLFLASH@\nsocfamily=@SOC_FAMILY@\nsvideo=@HAVE_SVIDEO@\ntranscoding=@HAVE_TRANSCODING@\nubinize=@UBINIZE_ARGS@\nvfdsymbol=@HAVE_VFDSYMBOL@\nwol=@HAVE_WOL@\nyuv=@HAVE_YUV@");
+MODULE_DESCRIPTION("Open Vision information module\narchitecture=@DEFAULTTUNE@\navjack=@HAVE_AV_JACK@\nblindscanbinary=@BLINDSCAN_BINARY@\nbrand=@BOX_BRAND@\nci=@HAVE_CI@\ncompiledate=@DATE@\ndboxlcd=@HAVE_DBOXLCD@\ndevelopername=@DEVELOPER_NAME@\ndisplaybrand=@DISPLAY_BRAND@\ndisplaydistro=@DISPLAY_DISTRO@\ndisplaymodel=@DISPLAY_MODEL@\ndisplaytype=@DISPLAY_TYPE@\ndistro=@DISTRO_NAME@\ndriverdate=@DRIVERDATE@\ndvi=@HAVE_DVI@\nemmc=@HAVE_EMMC@\nfeedsurl=@DISTRO_FEED_URI@\nfhdskin=@HAVE_FHDSKIN@\nforcemode=@FORCE@\nfpu=@TARGET_FPU@\nfriendlyfamily=@FRIENDLY_FAMILY@\nhdmifhdin=@HAVE_HDMI_IN_FHD@\nhdmi=@HAVE_HDMI@\nhdmihdin=@HAVE_HDMI_IN_HD@\nimagebuild=@BUILD_VERSION@\nimagedevbuild=@DEVELOPER_BUILD_VERSION@\nimagedir=@IMAGEDIR@\nimagefs=@IMAGE_FSTYPES@\nimagetype=@DISTRO_TYPE@\nimageversion=@DISTRO_VERSION@\nimglanguage=@VISIONLANGUAGE@\nimgrevision=@VISIONREVISION@\nimgversion=@VISIONVERSION@\nkernelfile=@KERNEL_FILE@\nkernel=@KERNELVERSION@\nmediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\nmiddleflash=@HAVE_MIDDLEFLASH@\nmkubifs=@MKUBIFS_ARGS@\nmmc=@HAVE_MMC@\nmodel=@MACHINE@\nmtdbootfs=@MTD_BOOTFS@\nmtdkernel=@MTD_KERNEL@\nmtdrootfs=@MTD_ROOTFS@\nmultilib=@HAVE_MULTILIB@\nmultitranscoding=@HAVE_MULTITRANSCODING@\noe=@BUILD_VERSION@\nplatform=@STB_PLATFORM@\nrca=@HAVE_RCA@\nrcidnum=@RCIDNUM@\nrcname=@RCNAME@\nrctype=@RCTYPE@\nrootfile=@ROOTFS_FILE@\nscart=@HAVE_SCART@\nsmallflash=@HAVE_SMALLFLASH@\nsocfamily=@SOC_FAMILY@\nsvideo=@HAVE_SVIDEO@\ntranscoding=@HAVE_TRANSCODING@\nubinize=@UBINIZE_ARGS@\nvfdsymbol=@HAVE_VFDSYMBOL@\nwol=@HAVE_WOL@\nyuv=@HAVE_YUV@");
 MODULE_VERSION("@VISIONVERSION@-@VISIONREVISION@");

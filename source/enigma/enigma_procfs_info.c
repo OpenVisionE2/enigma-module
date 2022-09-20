@@ -8,7 +8,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	seq_printf(m, "brand=@BOX_BRAND@\n");
 	seq_printf(m, "ci=@HAVE_CI@\n");
 	seq_printf(m, "compiledate=@DATE@\n");
-	seq_printf(m, "dboxlcd=@SUPPORT_DBOXLCD@\n");
+	seq_printf(m, "dboxlcd=@HAVE_DBOXLCD@\n");
 	seq_printf(m, "developername=@DEVELOPER_NAME@\n");
 	seq_printf(m, "displaybrand=@DISPLAY_BRAND@\n");
 	seq_printf(m, "displaydistro=@DISPLAY_DISTRO@\n");
@@ -17,6 +17,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	seq_printf(m, "distro=@DISTRO_NAME@\n");
 	seq_printf(m, "driverdate=@DRIVERDATE@\n");
 	seq_printf(m, "dvi=@HAVE_DVI@\n");
+	seq_printf(m, "emmc=@HAVE_EMMC\n");
 	seq_printf(m, "feedsurl=@DISTRO_FEED_URI@\n");
 	seq_printf(m, "fhdskin=@HAVE_FHDSKIN@\n");
 	seq_printf(m, "forcemode=@FORCE@\n");
@@ -39,6 +40,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	seq_printf(m, "mediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\n");
 	seq_printf(m, "middleflash=@HAVE_MIDDLEFLASH@\n");
 	seq_printf(m, "mkubifs=@MKUBIFS_ARGS@\n");
+	seq_printf(m, "mmc=@HAVE_MMC\n");
 	seq_printf(m, "model=@MACHINE@\n");
 	seq_printf(m, "mtdbootfs=@MTD_BOOTFS@\n");
 	seq_printf(m, "mtdkernel=@MTD_KERNEL@\n");
@@ -68,7 +70,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	printk(KERN_INFO "brand=@BOX_BRAND@\n");
 	printk(KERN_INFO "ci=@HAVE_CI@\n");
 	printk(KERN_INFO "compiledate=@DATE@\n");
-	printk(KERN_INFO "dboxlcd=@SUPPORT_DBOXLCD@\n");
+	printk(KERN_INFO "dboxlcd=@HAVE_DBOXLCD@\n");
 	printk(KERN_INFO "developername=@DEVELOPER_NAME@\n");
 	printk(KERN_INFO "displaybrand=@DISPLAY_BRAND@\n");
 	printk(KERN_INFO "displaydistro=@DISPLAY_DISTRO@\n");
@@ -77,6 +79,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	printk(KERN_INFO "distro=@DISTRO_NAME@\n");
 	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
 	printk(KERN_INFO "dvi=@HAVE_DVI@\n");
+	printk(KERN_INFO "emmc=@HAVE_EMMC@\n");
 	printk(KERN_INFO "feedsurl=@DISTRO_FEED_URI@\n");
 	printk(KERN_INFO "fhdskin=@HAVE_FHDSKIN@\n");
 	printk(KERN_INFO "forcemode=@FORCE@\n");
@@ -99,6 +102,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	printk(KERN_INFO "mediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\n");
 	printk(KERN_INFO "middleflash=@HAVE_MIDDLEFLASH@\n");
 	printk(KERN_INFO "mkubifs=@MKUBIFS_ARGS@\n");
+	printk(KERN_INFO "mmc=@HAVE_MMC@\n");
 	printk(KERN_INFO "model=@MACHINE@\n");
 	printk(KERN_INFO "mtdbootfs=@MTD_BOOTFS@\n");
 	printk(KERN_INFO "mtdkernel=@MTD_KERNEL@\n");
@@ -181,9 +185,9 @@ int get_enigma_compiledate(struct seq_file *m, void* data)
 
 int get_enigma_dboxlcd(struct seq_file *m, void* data)
 {
-	seq_printf(m, "@SUPPORT_DBOXLCD@\n");
+	seq_printf(m, "@HAVE_DBOXLCD@\n");
 #ifdef DEBUG
-	printk(KERN_INFO "dboxlcd=@SUPPORT_DBOXLCD@\n");
+	printk(KERN_INFO "dboxlcd=@HAVE_DBOXLCD@\n");
 #endif
 	return 0;
 }
@@ -256,6 +260,15 @@ int get_enigma_dvi(struct seq_file *m, void* data)
 	seq_printf(m, "@HAVE_DVI@\n");
 #ifdef DEBUG
 	printk(KERN_INFO "dvi=@HAVE_DVI@\n");
+#endif
+	return 0;
+}
+
+int get_enigma_emmc(struct seq_file *m, void* data)
+{
+	seq_printf(m, "@HAVE_EMMC@\n");
+#ifdef DEBUG
+	printk(KERN_INFO "emmc=@HAVE_EMMC@\n");
 #endif
 	return 0;
 }
@@ -454,6 +467,15 @@ int get_enigma_mkubifs(struct seq_file *m, void* data)
 	seq_printf(m, "@MKUBIFS_ARGS@\n");
 #ifdef DEBUG
 	printk(KERN_INFO "mkubifs=@MKUBIFS_ARGS@\n");
+#endif
+	return 0;
+}
+
+int get_enigma_mmc(struct seq_file *m, void* data)
+{
+	seq_printf(m, "@HAVE_MMC@\n");
+#ifdef DEBUG
+	printk(KERN_INFO "mmc=@HAVE_MMC@\n");
 #endif
 	return 0;
 }
