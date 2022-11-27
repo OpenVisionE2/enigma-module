@@ -18,6 +18,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	seq_printf(m, "driverdate=@DRIVERDATE@\n");
 	seq_printf(m, "dvi=@HAVE_DVI@\n");
 	seq_printf(m, "emmc=@HAVE_EMMC\n");
+	seq_printf(m, "fan=@HAVE_FAN@\n");
 	seq_printf(m, "feedsurl=@DISTRO_FEED_URI@\n");
 	seq_printf(m, "fhdskin=@HAVE_FHDSKIN@\n");
 	seq_printf(m, "forcemode=@FORCE@\n");
@@ -80,6 +81,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
 	printk(KERN_INFO "dvi=@HAVE_DVI@\n");
 	printk(KERN_INFO "emmc=@HAVE_EMMC@\n");
+	printk(KERN_INFO "fan=@HAVE_FAN@\n");
 	printk(KERN_INFO "feedsurl=@DISTRO_FEED_URI@\n");
 	printk(KERN_INFO "fhdskin=@HAVE_FHDSKIN@\n");
 	printk(KERN_INFO "forcemode=@FORCE@\n");
@@ -269,6 +271,15 @@ int get_enigma_emmc(struct seq_file *m, void* data)
 	seq_printf(m, "@HAVE_EMMC@\n");
 #ifdef DEBUG
 	printk(KERN_INFO "emmc=@HAVE_EMMC@\n");
+#endif
+	return 0;
+}
+
+int get_enigma_fan(struct seq_file *m, void* data)
+{
+	seq_printf(m, "@HAVE_FAN@\n");
+#ifdef DEBUG
+	printk(KERN_INFO "fan=@HAVE_FAN@\n");
 #endif
 	return 0;
 }
