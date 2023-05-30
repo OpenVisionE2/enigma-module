@@ -61,7 +61,6 @@ int get_enigma_displaymodel(struct seq_file *m, void* data);
 int get_enigma_displaytype(struct seq_file *m, void* data);
 int get_enigma_distro(struct seq_file *m, void* data);
 int get_enigma_driverdate(struct seq_file *m, void* data);
-int get_enigma_dvi(struct seq_file *m, void* data);
 int get_enigma_emmc(struct seq_file *m, void* data);
 int get_enigma_fan(struct seq_file *m, void* data);
 int get_enigma_feedsurl(struct seq_file *m, void* data);

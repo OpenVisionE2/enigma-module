@@ -16,7 +16,6 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	seq_printf(m, "displaytype=@DISPLAY_TYPE@\n");
 	seq_printf(m, "distro=@DISTRO_NAME@\n");
 	seq_printf(m, "driverdate=@DRIVERDATE@\n");
-	seq_printf(m, "dvi=@HAVE_DVI@\n");
 	seq_printf(m, "emmc=@HAVE_EMMC\n");
 	seq_printf(m, "fan=@HAVE_FAN@\n");
 	seq_printf(m, "feedsurl=@DISTRO_FEED_URI@\n");
@@ -79,7 +78,6 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	printk(KERN_INFO "displaytype=@DISPLAY_TYPE@\n");
 	printk(KERN_INFO "distro=@DISTRO_NAME@\n");
 	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
-	printk(KERN_INFO "dvi=@HAVE_DVI@\n");
 	printk(KERN_INFO "emmc=@HAVE_EMMC@\n");
 	printk(KERN_INFO "fan=@HAVE_FAN@\n");
 	printk(KERN_INFO "feedsurl=@DISTRO_FEED_URI@\n");
@@ -253,15 +251,6 @@ int get_enigma_driverdate(struct seq_file *m, void* data)
 	seq_printf(m, "@DRIVERDATE@\n");
 #ifdef DEBUG
 	printk(KERN_INFO "driverdate=@DRIVERDATE@\n");
-#endif
-	return 0;
-}
-
-int get_enigma_dvi(struct seq_file *m, void* data)
-{
-	seq_printf(m, "@HAVE_DVI@\n");
-#ifdef DEBUG
-	printk(KERN_INFO "dvi=@HAVE_DVI@\n");
 #endif
 	return 0;
 }
