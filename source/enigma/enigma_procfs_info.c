@@ -60,6 +60,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	seq_printf(m, "svideo=@HAVE_SVIDEO@\n");
 	seq_printf(m, "transcoding=@HAVE_TRANSCODING@\n");
 	seq_printf(m, "ubinize=@UBINIZE_ARGS@\n");
+	seq_printf(m, "uhd4k=@HAVE_UHD4K@\n");
 	seq_printf(m, "vfdsymbol=@HAVE_VFDSYMBOL@\n");
 	seq_printf(m, "wol=@HAVE_WOL@\n");
 	seq_printf(m, "yuv=@HAVE_YUV@\n");
@@ -122,6 +123,7 @@ int get_enigma_allinfo(struct seq_file *m, void* data)
 	printk(KERN_INFO "svideo=@HAVE_SVIDEO@\n");
 	printk(KERN_INFO "transcoding=@HAVE_TRANSCODING@\n");
 	printk(KERN_INFO "ubinize=@UBINIZE_ARGS@\n");
+	printk(KERN_INFO "uhd4k=@HAVE_UHD4K@\n");
 	printk(KERN_INFO "vfdsymbol=@HAVE_VFDSYMBOL@\n");
 	printk(KERN_INFO "wol=@HAVE_WOL@\n");
 	printk(KERN_INFO "yuv=@HAVE_YUV@\n");
@@ -648,6 +650,15 @@ int get_enigma_ubinize(struct seq_file *m, void* data)
 	seq_printf(m, "@UBINIZE_ARGS@\n");
 #ifdef DEBUG
 	printk(KERN_INFO "ubinize=@UBINIZE_ARGS@\n");
+#endif
+	return 0;
+}
+
+int get_enigma_uhd4k(struct seq_file *m, void* data)
+{
+	seq_printf(m, "@HAVE_UHD4K@\n");
+#ifdef DEBUG
+	printk(KERN_INFO "uhd4k=@HAVE_UHD4K@\n");
 #endif
 	return 0;
 }

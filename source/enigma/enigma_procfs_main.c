@@ -123,6 +123,8 @@ struct ProcStructure_s enigmaProc[] =
 	//getHaveTranscoding
 	{cProcEntry, "enigma/ubinize", ENIGMA_PROC_PERMISSION, get_enigma_ubinize, NULL, NULL, ""},
 	//getMachineUBINIZE
+	{cProcEntry, "enigma/uhd4k", ENIGMA_PROC_PERMISSION, get_enigma_uhd4k, NULL, NULL, ""},
+	//getUHD4K
 	{cProcEntry, "enigma/vfdsymbol", ENIGMA_PROC_PERMISSION, get_enigma_vfdsymbol, NULL, NULL, ""},
 	//getHaveVFDSymbol
 	{cProcEntry, "enigma/wol", ENIGMA_PROC_PERMISSION, get_enigma_wol, NULL, NULL, ""},
@@ -347,6 +349,7 @@ void enigma_kernel_info(void)
 	printk(KERN_INFO "svideo=@HAVE_SVIDEO@\n");
 	printk(KERN_INFO "transcoding=@HAVE_TRANSCODING@\n");
 	printk(KERN_INFO "ubinize=@UBINIZE_ARGS@\n");
+	printk(KERN_INFO "uhd4k=@HAVE_UHD4K@\n");
 	printk(KERN_INFO "vfdsymbol=@HAVE_VFDSYMBOL@\n");
 	printk(KERN_INFO "wol=@HAVE_WOL@\n");
 	printk(KERN_INFO "yuv=@HAVE_YUV@\n");
@@ -404,5 +407,5 @@ module_init(enigmaProcfs_init_module);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Open Vision developers");
-MODULE_DESCRIPTION("Open Vision information module\narchitecture=@DEFAULTTUNE@\navjack=@HAVE_AV_JACK@\nblindscanbinary=@BLINDSCAN_BINARY@\nbrand=@BOX_BRAND@\nci=@HAVE_CI@\ncompiledate=@DATE@\ndboxlcd=@HAVE_DBOXLCD@\ndevelopername=@DEVELOPER_NAME@\ndisplaybrand=@DISPLAY_BRAND@\ndisplaydistro=@DISPLAY_DISTRO@\ndisplaymodel=@DISPLAY_MODEL@\ndisplaytype=@DISPLAY_TYPE@\ndistro=@DISTRO_NAME@\ndriverdate=@DRIVERDATE@\nemmc=@HAVE_EMMC@\nfan=@HAVE_FAN@\nfeedsurl=@DISTRO_FEED_URI@\nfhdskin=@HAVE_FHDSKIN@\nforcemode=@FORCE@\nfpu=@TARGET_FPU@\nfriendlyfamily=@FRIENDLY_FAMILY@\nhdmifhdin=@HAVE_HDMI_IN_FHD@\nhdmi=@HAVE_HDMI@\nhdmihdin=@HAVE_HDMI_IN_HD@\nimagebuild=@BUILD_VERSION@\nimagedevbuild=@DEVELOPER_BUILD_VERSION@\nimagedir=@IMAGEDIR@\nimagefs=@IMAGE_FSTYPES@\nimagetype=@DISTRO_TYPE@\nimageversion=@DISTRO_VERSION@\nimglanguage=@VISIONLANGUAGE@\nimgrevision=@VISIONREVISION@\nimgversion=@VISIONVERSION@\nkernelfile=@KERNEL_FILE@\nkernel=@KERNELVERSION@\nmediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\nmiddleflash=@HAVE_MIDDLEFLASH@\nmkubifs=@MKUBIFS_ARGS@\nmmc=@HAVE_MMC@\nmodel=@MACHINE@\nmtdbootfs=@MTD_BOOTFS@\nmtdkernel=@MTD_KERNEL@\nmtdrootfs=@MTD_ROOTFS@\nmultilib=@HAVE_MULTILIB@\nmultitranscoding=@HAVE_MULTITRANSCODING@\noe=@BUILD_VERSION@\nplatform=@STB_PLATFORM@\nrca=@HAVE_RCA@\nrcidnum=@RCIDNUM@\nrcname=@RCNAME@\nrctype=@RCTYPE@\nrootfile=@ROOTFS_FILE@\nscart=@HAVE_SCART@\nsmallflash=@HAVE_SMALLFLASH@\nsocfamily=@SOC_FAMILY@\nsvideo=@HAVE_SVIDEO@\ntranscoding=@HAVE_TRANSCODING@\nubinize=@UBINIZE_ARGS@\nvfdsymbol=@HAVE_VFDSYMBOL@\nwol=@HAVE_WOL@\nyuv=@HAVE_YUV@");
+MODULE_DESCRIPTION("Open Vision information module\narchitecture=@DEFAULTTUNE@\navjack=@HAVE_AV_JACK@\nblindscanbinary=@BLINDSCAN_BINARY@\nbrand=@BOX_BRAND@\nci=@HAVE_CI@\ncompiledate=@DATE@\ndboxlcd=@HAVE_DBOXLCD@\ndevelopername=@DEVELOPER_NAME@\ndisplaybrand=@DISPLAY_BRAND@\ndisplaydistro=@DISPLAY_DISTRO@\ndisplaymodel=@DISPLAY_MODEL@\ndisplaytype=@DISPLAY_TYPE@\ndistro=@DISTRO_NAME@\ndriverdate=@DRIVERDATE@\nemmc=@HAVE_EMMC@\nfan=@HAVE_FAN@\nfeedsurl=@DISTRO_FEED_URI@\nfhdskin=@HAVE_FHDSKIN@\nforcemode=@FORCE@\nfpu=@TARGET_FPU@\nfriendlyfamily=@FRIENDLY_FAMILY@\nhdmifhdin=@HAVE_HDMI_IN_FHD@\nhdmi=@HAVE_HDMI@\nhdmihdin=@HAVE_HDMI_IN_HD@\nimagebuild=@BUILD_VERSION@\nimagedevbuild=@DEVELOPER_BUILD_VERSION@\nimagedir=@IMAGEDIR@\nimagefs=@IMAGE_FSTYPES@\nimagetype=@DISTRO_TYPE@\nimageversion=@DISTRO_VERSION@\nimglanguage=@VISIONLANGUAGE@\nimgrevision=@VISIONREVISION@\nimgversion=@VISIONVERSION@\nkernelfile=@KERNEL_FILE@\nkernel=@KERNELVERSION@\nmediaservice=@PREFERRED_PROVIDER_virtual/enigma2-mediaservice@\nmiddleflash=@HAVE_MIDDLEFLASH@\nmkubifs=@MKUBIFS_ARGS@\nmmc=@HAVE_MMC@\nmodel=@MACHINE@\nmtdbootfs=@MTD_BOOTFS@\nmtdkernel=@MTD_KERNEL@\nmtdrootfs=@MTD_ROOTFS@\nmultilib=@HAVE_MULTILIB@\nmultitranscoding=@HAVE_MULTITRANSCODING@\noe=@BUILD_VERSION@\nplatform=@STB_PLATFORM@\nrca=@HAVE_RCA@\nrcidnum=@RCIDNUM@\nrcname=@RCNAME@\nrctype=@RCTYPE@\nrootfile=@ROOTFS_FILE@\nscart=@HAVE_SCART@\nsmallflash=@HAVE_SMALLFLASH@\nsocfamily=@SOC_FAMILY@\nsvideo=@HAVE_SVIDEO@\ntranscoding=@HAVE_TRANSCODING@\nubinize=@UBINIZE_ARGS@\nuhd4k=@HAVE_UHD4K@\nvfdsymbol=@HAVE_VFDSYMBOL@\nwol=@HAVE_WOL@\nyuv=@HAVE_YUV@");
 MODULE_VERSION("@VISIONVERSION@-@VISIONREVISION@");

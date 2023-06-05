@@ -105,6 +105,7 @@ int get_enigma_socfamily(struct seq_file *m, void* data);
 int get_enigma_svideo(struct seq_file *m, void* data);
 int get_enigma_transcoding(struct seq_file *m, void* data);
 int get_enigma_ubinize(struct seq_file *m, void* data);
+int get_enigma_uhd4k(struct seq_file *m, void* data);
 int get_enigma_vfdsymbol(struct seq_file *m, void* data);
 int get_enigma_wol(struct seq_file *m, void* data);
 int get_enigma_yuv(struct seq_file *m, void* data);
